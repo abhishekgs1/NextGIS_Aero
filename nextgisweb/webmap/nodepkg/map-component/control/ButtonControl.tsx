@@ -57,7 +57,7 @@ export function ButtonControl({
                 onClick={onBtnClick}
                 style={btnStyle}
             >
-                {children === 0 ? "0" : children}
+                {children}
             </button>
         </MapControl>
     );
