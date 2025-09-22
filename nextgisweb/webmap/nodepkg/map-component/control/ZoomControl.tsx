@@ -1,4 +1,3 @@
-import classNames from "classnames";
 import { observer } from "mobx-react-lite";
 import type { FitOptions } from "ol/View";
 import type { Options as OlZoomControlOptions } from "ol/control/Zoom";
@@ -148,55 +147,52 @@ export const ZoomControl = observer(
         }, [mapStore, extent, extentProjection, fitOptions]);
 
         return (
-            <MapControl position={position} order={order} bar margin>
-                <div
-                    className={classNames(
-                        "mapadapter-btn-ctrl",
-                        "mapadapter-ctrl-group",
-                        "ol-unselectable",
-                        className
-                    )}
+            <MapControl
+                className={className}
+                position={position}
+                order={order}
+                bar
+                margin
+            >
+                <button
+                    type="button"
+                    disabled={!canZoomIn}
+                    className="ol-zoom-in"
+                    title={zoomInTipLabel}
+                    onClick={zoomIn}
                 >
+                    <ZoomInIcon />
+                </button>
+
+                {showZoomLevel && (
+                    <ZoomLevel
+                        mapStore={mapStore}
+                        {...(typeof showZoomLevel === "object"
+                            ? showZoomLevel
+                            : {})}
+                    />
+                )}
+
+                <button
+                    type="button"
+                    disabled={!canZoomOut}
+                    className="ol-zoom-out"
+                    title={zoomOutTipLabel}
+                    onClick={zoomOut}
+                >
+                    <ZoomOutIcon />
+                </button>
+
+                {extent && (
                     <button
                         type="button"
-                        disabled={!canZoomIn}
-                        className="ol-zoom-in"
-                        title={zoomInTipLabel}
-                        onClick={zoomIn}
+                        className="home-button"
+                        title={gettext("Back to the initial extent")}
+                        onClick={goHome}
                     >
-                        <ZoomInIcon />
+                        <HomeIcon />
                     </button>
-
-                    {showZoomLevel && (
-                        <ZoomLevel
-                            mapStore={mapStore}
-                            {...(typeof showZoomLevel === "object"
-                                ? showZoomLevel
-                                : {})}
-                        />
-                    )}
-
-                    <button
-                        type="button"
-                        disabled={!canZoomOut}
-                        className="ol-zoom-out"
-                        title={zoomOutTipLabel}
-                        onClick={zoomOut}
-                    >
-                        <ZoomOutIcon />
-                    </button>
-
-                    {extent && (
-                        <button
-                            type="button"
-                            className="home-button"
-                            title={gettext("Back to the initial extent")}
-                            onClick={goHome}
-                        >
-                            <HomeIcon />
-                        </button>
-                    )}
-                </div>
+                )}
             </MapControl>
         );
     }
