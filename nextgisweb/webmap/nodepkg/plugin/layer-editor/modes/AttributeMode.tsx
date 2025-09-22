@@ -127,7 +127,7 @@ export function AttributeMode({
             {modalHolder}
             <ToggleControl
                 groupId={EDITING_STATES.ATTRIBUTE_EDITING}
-                title={gettext("Attribute editing")}
+                title={gettext("Edit attributes")}
                 order={order}
                 onChange={setActive}
             >

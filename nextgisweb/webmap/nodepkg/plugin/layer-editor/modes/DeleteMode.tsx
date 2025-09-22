@@ -67,7 +67,7 @@ export function DeleteMode({ order }: { order?: number }) {
     return (
         <ToggleControl
             groupId={EDITING_STATES.DELETING}
-            title={gettext("Deleting")}
+            title={gettext("Delete")}
             order={order}
             onChange={setActive}
         >

@@ -73,7 +73,7 @@ export function DrawMode({ order, onDrawend }: DrawModeProps) {
             <ToggleControl
                 groupId={EDITING_STATES.CREATING}
                 order={-1}
-                title={gettext("Creating")}
+                title={gettext("Create")}
                 onChange={setActive}
             >
                 <CreateIcon />

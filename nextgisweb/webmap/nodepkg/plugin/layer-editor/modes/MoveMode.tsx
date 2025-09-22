@@ -88,7 +88,7 @@ export function MoveMode({ order }: { order?: number }) {
     return (
         <ToggleControl
             groupId={EDITING_STATES.MOVING}
-            title={gettext("Moving")}
+            title={gettext("Move")}
             order={order}
             onChange={setActive}
         >

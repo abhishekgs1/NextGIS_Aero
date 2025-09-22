@@ -242,7 +242,7 @@ msgstr "Скрывать легенду"
 msgid "Unable to load tile"
 msgstr "Ошибка загрузки тайла"
 
-#: nodepkg/map-component/control/IdentifyControl.tsx:83
+#: nodepkg/map-component/control/IdentifyControl.tsx:86
 msgid "Clear selection"
 msgstr "Очистить выделение"
 
@@ -348,16 +348,16 @@ msgstr "Начальный охват"
 msgid "Locate me"
 msgstr "Определить мое местоположение"
 
-#: nodepkg/map-controls/map-controls.ts:92 nodepkg/settings/SettingsForm.tsx:84
-#: option/base.py:41
+#: nodepkg/map-controls/map-controls.ts:92 nodepkg/map-controls/map-controls.ts:97
+#: nodepkg/settings/SettingsForm.tsx:84 option/base.py:41
 msgid "Identification"
 msgstr "Идентификация"
 
-#: nodepkg/map-controls/map-tools.ts:57
+#: nodepkg/map-controls/map-tools.ts:58
 msgid "Cursor coordinates / extent"
 msgstr "Координаты курсора / охвата"
 
-#: nodepkg/map-controls/map-tools.ts:65
+#: nodepkg/map-controls/map-tools.ts:67
 msgid "Editor"
 msgstr "Редактор"
 
@@ -742,16 +742,18 @@ msgid "Stop editing layer: {layer}"
 msgstr "Завершить редактирование слоя: {layer}"
 
 #: nodepkg/plugin/layer-editor/modes/AttributeMode.tsx:130
-msgid "Attribute editing"
-msgstr "Редактирование атрибутов"
+msgid "Edit attributes"
+msgstr "Редактировать атрибуты"
 
 #: nodepkg/plugin/layer-editor/modes/DeleteMode.tsx:70
-msgid "Deleting"
-msgstr "Удаление"
+#: nodepkg/ui/annotation-dialog/AnnotationsModal.tsx:159
+msgid "Delete"
+msgstr "Удалить"
 
 #: nodepkg/plugin/layer-editor/modes/DrawMode.tsx:76
-msgid "Creating"
-msgstr "Создание"
+#: nodepkg/ui/annotation-dialog/AnnotationsModal.tsx:175
+msgid "Create"
+msgstr "Создать"
 
 #: nodepkg/plugin/layer-editor/modes/HoleMode.tsx:26
 msgid "Click inside a polygon to start cutting a hole"
@@ -762,12 +764,12 @@ msgid "Cut hole"
 msgstr "Вырезать отверстие"
 
 #: nodepkg/plugin/layer-editor/modes/ModifyMode.tsx:53
-msgid "Modifying"
-msgstr "Изменение"
+msgid "Modify"
+msgstr "Изменить"
 
 #: nodepkg/plugin/layer-editor/modes/MoveMode.tsx:91
-msgid "Moving"
-msgstr "Перемещение"
+msgid "Move"
+msgstr "Переместить"
 
 #: nodepkg/plugin/zoom-to-layer/ZoomToLayerPlugin.tsx:18
 msgid "Zoom to layer"
@@ -1021,19 +1023,11 @@ msgstr "Редактировать аннотацию"
 msgid "Create annotation"
 msgstr "Создать аннотацию"
 
-#: nodepkg/ui/annotation-dialog/AnnotationsModal.tsx:159
-msgid "Delete"
-msgstr "Удалить"
-
 #: nodepkg/ui/annotation-dialog/AnnotationsModal.tsx:162
 #: nodepkg/ui/annotation-dialog/AnnotationsModal.tsx:171
 #: nodepkg/ui/finish-editing-dialog/FinishEditingDialog.tsx:59
 msgid "Cancel"
 msgstr "Отменить"
-
-#: nodepkg/ui/annotation-dialog/AnnotationsModal.tsx:175
-msgid "Create"
-msgstr "Создать"
 
 #: nodepkg/ui/annotation-dialog/AnnotationsSettings.tsx:59
 msgid "Stroke: width / color"
@@ -1155,21 +1149,3 @@ msgstr "Просмотр встроенной веб-карты"
 #: view.py:119
 msgid "Web map settings"
 msgstr "Настройки веб-карты"
-
-#~ msgid "Attributions"
-#~ msgstr "Информация о правообладателях"
-
-#~ msgid "Show cursor coordinates / extent"
-#~ msgstr "Показать координаты курсора / охват"
-
-#~ msgid "Create features"
-#~ msgstr "Создать объекты"
-
-#~ msgid "Delete features"
-#~ msgstr "Удалить объекты"
-
-#~ msgid "Modify features"
-#~ msgstr "Изменить объекты"
-
-#~ msgid "Stopping editing"
-#~ msgstr "Завершить редактирование?"

@@ -50,7 +50,7 @@ export function ModifyMode({ order }: { order: number }) {
     return (
         <ToggleControl
             groupId={EDITING_STATES.MODIFYING}
-            title={gettext("Modifying")}
+            title={gettext("Modify")}
             order={order}
             onChange={setActive}
         >
