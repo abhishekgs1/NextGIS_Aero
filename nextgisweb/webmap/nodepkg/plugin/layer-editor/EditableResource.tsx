@@ -156,9 +156,9 @@ export const EditableResource = observer(
                         onEditingMode={setEditingMode}
                         onDirtyChange={onDirtyChange}
                     >
-                        <ModifyMode order={1} />
-                        <MoveMode order={2} />
-                        <DrawMode order={3} onDrawend={onDrawend} />
+                        <DrawMode order={1} onDrawend={onDrawend} />
+                        <ModifyMode order={2} />
+                        <MoveMode order={3} />
                         {geomConfig.type.includes("Polygon") && (
                             <HoleMode order={4} />
                         )}

@@ -28,7 +28,7 @@ const ToolEditor = observer(
 
         const [canSnap, setCanSnap] = useState(true);
         const [editingMode, setEditingMode] = useState<string | null>(
-            EDITING_STATES.MODIFYING
+            EDITING_STATES.CREATING
         );
 
         const groupItemRef = useRef(groupItem);
