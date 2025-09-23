@@ -55,6 +55,7 @@ mapControlRegistry(COMP_ID, {
     order: 30,
     label: gettext("Info scale"),
     position: { inside: "attribution-toolbar" },
+    hideOnMobile: true,
     embeddedShowMode: "customize",
     component: () => import("../map-component/control/InfoScaleControl"),
 });

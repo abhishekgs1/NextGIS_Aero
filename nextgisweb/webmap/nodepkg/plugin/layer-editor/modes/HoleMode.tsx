@@ -69,9 +69,7 @@ export function HoleMode({ order }: { order?: number }) {
         hoveredRef.current = found;
 
         if (found !== selectedRef.current) {
-            found.setStyle(
-                new Style({ ...selectStyleOptions, zIndex: 9998 } as any)
-            );
+            found.setStyle(new Style({ ...selectStyleOptions, zIndex: 9998 }));
         }
     }, [olMap, clear, layer, selectStyleOptions]);
 

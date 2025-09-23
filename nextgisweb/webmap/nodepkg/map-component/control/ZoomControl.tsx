@@ -116,8 +116,8 @@ export const ZoomControl = observer(
                 const newZoom = view.getConstrainedZoom(current + d);
                 if (typeof newZoom === "number") {
                     if (duration > 0) {
-                        if ((view as any).getAnimating?.()) {
-                            (view as any).cancelAnimations?.();
+                        if (view.getAnimating?.()) {
+                            view.cancelAnimations?.();
                         }
                         view.animate({
                             zoom: newZoom,

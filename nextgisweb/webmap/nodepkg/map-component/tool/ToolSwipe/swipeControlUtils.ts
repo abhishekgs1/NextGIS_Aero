@@ -4,7 +4,7 @@ import type { Orientation } from "./SwipeControl";
 
 export function postcompose(e: RenderEvent) {
     const restore = () => {
-        if (e.context && "restore" in e.context) (e.context as any).restore();
+        if (e.context && "restore" in e.context) e.context.restore();
     };
     // restore context when decluttering is done
     // https://github.com/openlayers/openlayers/issues/10096

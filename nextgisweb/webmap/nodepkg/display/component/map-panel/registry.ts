@@ -19,6 +19,7 @@ export interface MapControlPlugin<P = any> {
     props?: ControlProps<P>;
     label?: string;
     position?: TargetPosition;
+    hideOnMobile?: boolean;
     embeddedShowMode?: EmbeddedShowMode;
 }
 

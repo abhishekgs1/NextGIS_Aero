@@ -3,6 +3,7 @@ import { Suspense, lazy, useCallback, useMemo } from "react";
 import type React from "react";
 
 import { useThemeVariables } from "@nextgisweb/gui/hook";
+import { useContainerWidth } from "@nextgisweb/gui/hook/useContainerWidth";
 import { MapComponent } from "@nextgisweb/webmap/map-component";
 
 import type { Display } from "../../Display";
@@ -21,6 +22,9 @@ export const MapPane = observer(
         const themeVariables = useThemeVariables({
             "theme-color-primary": "colorPrimary",
         });
+
+        const width = useContainerWidth(display.map.targetElement);
+        const isMobile = width < 500;
 
         const whenCreated = useCallback(() => {
             display.setMapReady(true);
@@ -47,6 +51,10 @@ export const MapPane = observer(
                 }
             }
 
+            if (isMobile) {
+                reg = reg.filter((r) => !r.hideOnMobile);
+            }
+
             return reg
                 .sort((a, b) => (a.order ?? 0) - (b.order ?? 0))
                 .map(({ component, key, props, order, position }) => ({
@@ -54,7 +62,7 @@ export const MapPane = observer(
                     LazyControl: lazy(component),
                     props: { order, position, ...props },
                 }));
-        }, [display]);
+        }, [display, isMobile]);
 
         return (
             <MapComponent

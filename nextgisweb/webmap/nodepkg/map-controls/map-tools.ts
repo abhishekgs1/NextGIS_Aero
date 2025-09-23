@@ -11,6 +11,7 @@ mapControlRegistry(COMP_ID, {
     component: () => import("../map-component/tool/ToolZoom"),
     label: gettext("Zoom in"),
     position: { inside: "map-toolbar" },
+    hideOnMobile: true,
     embeddedShowMode: "customize",
     props: { out: false, groupId: "zoomingIn" },
 });
@@ -20,6 +21,7 @@ mapControlRegistry(COMP_ID, {
     component: () => import("../map-component/tool/ToolZoom"),
     label: gettext("Zoom out"),
     position: { inside: "map-toolbar" },
+    hideOnMobile: true,
     embeddedShowMode: "customize",
     props: { out: true, groupId: "zoomingOut" },
 });
@@ -47,6 +49,7 @@ mapControlRegistry(COMP_ID, {
     component: () => import("../map-component/tool/ToolSwipe"),
     label: gettext("Vertical swipe"),
     position: { inside: "map-toolbar" },
+    hideOnMobile: true,
     embeddedShowMode: "customize",
     props: { orientation: "vertical", groupId: "swipeVertical" },
 });
@@ -58,6 +61,7 @@ mapControlRegistry(COMP_ID, {
         label: gettext("Cursor coordinates / extent"),
     },
     position: { inside: "map-toolbar" },
+    hideOnMobile: true,
     embeddedShowMode: "customize",
 });
 mapControlRegistry(COMP_ID, {
