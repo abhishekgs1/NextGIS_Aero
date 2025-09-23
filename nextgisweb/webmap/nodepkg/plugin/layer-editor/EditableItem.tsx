@@ -10,6 +10,7 @@ import type { StyleFunction } from "ol/style/Style";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import type React from "react";
 
+import { useUnsavedChanges } from "@nextgisweb/gui/hook";
 import { useDebounce } from "@nextgisweb/pyramid/hook";
 import { gettext } from "@nextgisweb/pyramid/i18n";
 import { ButtonControl } from "@nextgisweb/webmap/map-component";
@@ -107,6 +108,8 @@ export const EditableItem = observer(
         useEffect(() => {
             setLayerOpacityDebounced(enabled && editingMode ? 1 : 0.4);
         }, [editingMode, enabled, setLayerOpacityDebounced]);
+
+        useUnsavedChanges({ dirty });
 
         return (
             <EditorContext
