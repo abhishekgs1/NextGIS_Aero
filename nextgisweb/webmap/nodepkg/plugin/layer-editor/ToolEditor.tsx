@@ -4,7 +4,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 
 import { errorModal } from "@nextgisweb/gui/error";
 import { useShowModal } from "@nextgisweb/gui/index";
-import { gettext } from "@nextgisweb/pyramid/i18n";
+import { gettextf } from "@nextgisweb/pyramid/i18n";
 import { useDisplayContext } from "@nextgisweb/webmap/display/context";
 import { ButtonControl } from "@nextgisweb/webmap/map-component";
 import type { MapControlProps } from "@nextgisweb/webmap/map-component";
@@ -161,11 +161,9 @@ const ToolEditor = observer(
                 {curentSelectedIsEditable && (
                     <>
                         <ButtonControl
-                            title={
-                                // prettier-ignore
-                                gettext("Stop editing layer: {layer}")
-                                .replace("{layer}", display.item?.label || "")
-                            }
+                            title={gettextf("Stop editing layer: {layer}")({
+                                layer: display.item?.label || "",
+                            })}
                             order={100}
                             onClick={() => {
                                 if (display.item) {
