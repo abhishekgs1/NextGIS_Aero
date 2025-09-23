@@ -11,7 +11,7 @@ mapControlRegistry(COMP_ID, {
         id: "attribution-toolbar",
         direction: "horizontal",
         align: "center",
-        gap: 10,
+        gap: 8,
     },
     position: "bottom-right",
     embeddedShowMode: "always",

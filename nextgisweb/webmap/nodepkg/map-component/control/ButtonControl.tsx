@@ -5,7 +5,8 @@ import type { CreateControlOptions } from "@nextgisweb/webmap/control-container/
 
 import { MapControl } from "./MapControl";
 import type { ControlProps } from "./MapControl";
-import "./ButtonControl.css";
+
+import "./ButtonControl.less";
 
 interface ButtonControlOptions extends CreateControlOptions {
     disabled?: boolean;
@@ -52,7 +53,7 @@ export function ButtonControl({
             <button
                 title={title}
                 disabled={disabled}
-                className={classNames("custom-button-control", btnClassName)}
+                className={btnClassName}
                 aria-label={title}
                 onClick={onBtnClick}
                 style={btnStyle}

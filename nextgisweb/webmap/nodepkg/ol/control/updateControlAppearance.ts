@@ -10,12 +10,6 @@ export function updateControlAppearance(
 
     el.className = "";
 
-    el.classList.remove(
-        "ol-unselectable",
-        "mapadapter-ctrl-group",
-        "mapadapter-ctrl-margin"
-    );
-
     el.classList.add("mapadapter-ctrl");
     el.classList.add("ol-unselectable");
     if (bar) {
@@ -37,6 +31,13 @@ export function updateControlAppearance(
     }
 
     if (style) {
-        Object.assign(el.style, style);
+        Object.entries(style).forEach(([k, v]) => {
+            if (k.startsWith("--")) {
+                // CSS variables assignment doesn't work by name
+                el.style.setProperty(k, v);
+            } else {
+                el.style[k as unknown as any] = v;
+            }
+        });
     }
 }

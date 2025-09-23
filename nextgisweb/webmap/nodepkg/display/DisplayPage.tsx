@@ -5,9 +5,6 @@ import { DisplayWidget } from "./DisplayWidget";
 
 import { LoadingOutlined } from "@ant-design/icons";
 
-import "./DisplayWidget.css";
-import "./DisplayWidget.less";
-
 export default function DisplayPage({ id }: { id: number }) {
     const { data: config, isLoading } = useRouteGet("webmap.display_config", {
         id,

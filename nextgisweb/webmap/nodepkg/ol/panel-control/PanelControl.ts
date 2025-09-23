@@ -1,9 +1,9 @@
-import "./PanelControl.css";
-
 import Control from "ol/control/Control";
 
 import { ControlContainer } from "../../control-container/ControlContainer";
 import type { TargetPosition } from "../../control-container/ControlContainer";
+
+import "./PanelControl.less";
 
 interface PanelControlOptions {
     collapsible?: boolean;

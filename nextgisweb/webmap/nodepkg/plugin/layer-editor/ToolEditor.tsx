@@ -139,9 +139,8 @@ const ToolEditor = observer(
                 position={position}
                 margin
                 direction="vertical"
-                gap={2}
+                gap={4}
                 id="editor-toolbar"
-                targetStyle={{ paddingTop: "20px" }}
             >
                 {modalHolder}
                 {editableItems.map(({ id, layerId }) => (

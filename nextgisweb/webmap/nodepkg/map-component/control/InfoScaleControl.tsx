@@ -9,6 +9,8 @@ import { useMapContext } from "../context/useMapContext";
 import { MapControl } from "./MapControl";
 import type { MapControlProps } from "./MapControl";
 
+import "./InfoScaleControl.less";
+
 export interface InfoScaleControlProps extends MapControlProps {
     renderNumber?: (val: number) => React.ReactNode;
 }
@@ -22,14 +24,11 @@ const InfoScaleControl = observer(
 
         return (
             <MapControl {...props}>
-                <span
-                    className="ol-control ol-scaleInfo ol-unselectable"
-                    style={{ whiteSpace: "nowrap" }}
-                >
+                <div className="ol-scale-info">
                     {debouncedScale
                         ? `1 : ${renderNumber ? renderNumber(debouncedScale) : formatScaleNumber(debouncedScale)}`
                         : ""}
-                </span>
+                </div>
             </MapControl>
         );
     }

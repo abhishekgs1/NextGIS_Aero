@@ -17,7 +17,6 @@ import { PanelSwitcher } from "./component/PanelSwitcher";
 import { MapPane } from "./component/map-panel";
 import { DisplayContext } from "./context/useDisplayContext";
 
-import "./DisplayWidget.css";
 import "./DisplayWidget.less";
 
 const { Panel } = Splitter;

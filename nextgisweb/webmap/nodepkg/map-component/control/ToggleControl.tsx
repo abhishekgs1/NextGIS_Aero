@@ -1,6 +1,8 @@
 import classNames from "classnames";
 import { useMemo } from "react";
 
+import { useThemeVariables } from "@nextgisweb/gui/hook";
+
 import { ButtonControl } from "./ButtonControl";
 import type { ButtonControlProps } from "./ButtonControl";
 import type { ControlProps } from "./MapControl";
@@ -51,9 +53,15 @@ export function ToggleControl({
         [value, style]
     );
 
+    const themeVariables = useThemeVariables({
+        "theme-color-primary": "colorPrimary",
+        "theme-color-text-light-solid": "colorTextLightSolid",
+    });
+
     return (
         <ButtonControl
             {...rest}
+            style={themeVariables}
             title={btnTitle}
             className={classNames(className, getVal(statusClassName, value), {
                 "toggle-on": value,

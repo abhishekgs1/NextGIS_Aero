@@ -16,7 +16,6 @@ import type { ControlProps } from "./MapControl";
 import { ToggleControl } from "./ToggleControl";
 
 import LocationIcon from "@nextgisweb/icon/material/my_location";
-import "./MyLocationControl.less";
 
 const zIndexLocationLayer = 6000;
 
