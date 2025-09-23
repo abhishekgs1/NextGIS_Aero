@@ -14,7 +14,7 @@ import { useInteraction } from "../hook/useInteraction";
 
 import { DrawControl } from "./component/DrawControl";
 
-import CreateIcon from "@nextgisweb/icon/material/add_box";
+import AddCircleIcon from "@nextgisweb/icon/material/add_circle";
 
 export interface DrawModeProps {
     order?: number;
@@ -76,7 +76,7 @@ export function DrawMode({ order, onDrawend }: DrawModeProps) {
                 title={gettext("Create")}
                 onChange={setActive}
             >
-                <CreateIcon />
+                <AddCircleIcon />
             </ToggleControl>
             {active && <DrawControl draw={draw} />}
         </MapToolbarControl>

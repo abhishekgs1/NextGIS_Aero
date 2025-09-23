@@ -7,7 +7,7 @@ import { ToggleControl } from "@nextgisweb/webmap/map-component";
 import { useEditorContext } from "./context/useEditorContext";
 import { useInteraction } from "./hook/useInteraction";
 
-import SnapIcon from "@nextgisweb/icon/material/join";
+import CenterFocusWeakIcon from "@nextgisweb/icon/material/center_focus_weak/outline";
 
 export function SnapToggle({
     order,
@@ -35,7 +35,7 @@ export function SnapToggle({
             onChange={onChange}
             order={order}
         >
-            <SnapIcon />
+            <CenterFocusWeakIcon />
         </ToggleControl>
     );
 }

@@ -14,7 +14,7 @@ import { EDITING_STATES } from "../constant";
 import { useEditorContext } from "../context/useEditorContext";
 import { useInteraction } from "../hook/useInteraction";
 
-import AttributeIcon from "@nextgisweb/icon/material/docs";
+import ListIcon from "@nextgisweb/icon/material/list/outline";
 
 export function AttributeMode({
     order,
@@ -131,7 +131,7 @@ export function AttributeMode({
                 order={order}
                 onChange={setActive}
             >
-                <AttributeIcon />
+                <ListIcon />
             </ToggleControl>
         </>
     );
